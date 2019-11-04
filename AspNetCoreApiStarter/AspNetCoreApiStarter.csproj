@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <UserSecretsId>fccc0ba4-1d08-4f09-a130-0ffc7601f94f</UserSecretsId>
+    <Platforms>AnyCPU;x64</Platforms>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -11,7 +17,6 @@
 
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <!--<GenerateAssemblyInfo>false</GenerateAssemblyInfo>-->
   </PropertyGroup>
 
   <PropertyGroup>
@@ -48,7 +53,7 @@
     <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.1-dev-00044" />
     <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
     <PackageReference Include="Stimulsoft.Reports.Engine.NetCore" Version="2019.2.3" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.1-rc.94">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.66">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
@@ -72,6 +77,16 @@
     <ProjectReference Include="..\AspNetCoreApiStarter.Shared\AspNetCoreApiStarter.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="ClientApp\**" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+  
   <ItemGroup>
     <Folder Include="Reporting\Exports\" />
   </ItemGroup>

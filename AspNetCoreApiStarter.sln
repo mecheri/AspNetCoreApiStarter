@@ -27,27 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StyleCop", "StyleCop", "{58
 		stylecop.json = stylecop.json
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Site", "Site\", "{71CC4770-A4BB-4534-9EE3-CC8DAC10FEBD}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_59665"
-		Debug.AspNetCompiler.PhysicalPath = "Site\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59665\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_59665"
-		Release.AspNetCompiler.PhysicalPath = "Site\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59665\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "59665"
-		SlnRelativePath = "Site\"
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreApiStarter.Tests", "AspNetCoreApiStarter.Tests\AspNetCoreApiStarter.Tests.csproj", "{E1AF806C-92D2-420C-B578-566BE377D5A3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreApiStarter.Tests.Integration", "AspNetCoreApiStarter.Tests.Integration\AspNetCoreApiStarter.Tests.Integration.csproj", "{DC53BE15-81F9-4CB7-A29D-F1119450882A}"
@@ -88,10 +67,6 @@ Global
 		{1F5AA101-AF34-4A81-9440-0CF6E7E3484A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F5AA101-AF34-4A81-9440-0CF6E7E3484A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F5AA101-AF34-4A81-9440-0CF6E7E3484A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71CC4770-A4BB-4534-9EE3-CC8DAC10FEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71CC4770-A4BB-4534-9EE3-CC8DAC10FEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71CC4770-A4BB-4534-9EE3-CC8DAC10FEBD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{71CC4770-A4BB-4534-9EE3-CC8DAC10FEBD}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{E1AF806C-92D2-420C-B578-566BE377D5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E1AF806C-92D2-420C-B578-566BE377D5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1AF806C-92D2-420C-B578-566BE377D5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU

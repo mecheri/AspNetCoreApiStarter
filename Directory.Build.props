@@ -1,5 +1,15 @@
 <Project>
- <PropertyGroup>
-  <AssemblyVersion>1.0.0.0</AssemblyVersion>
- </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <!-- Common ruleset shared by all projects -->
+    <CodeAnalysisRuleset>$(MSBuildThisFileDirectory)AspNetCoreApiStarter.ruleset</CodeAnalysisRuleset>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Add reference to StyleCop analyzers to all projects  -->
+    <PackageReference Include="StyleCop.Analyzers" />
+
+    <!-- Common StyleCop configuration -->
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
+  </ItemGroup>
 </Project>
