@@ -1,0 +1,9 @@
+<div *ngIf="serverErrorMessages" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100" class="m-b-20">
+    <mat-card class="bg-danger">
+        <mat-card-content>
+            <ul>
+                <li *ngFor="let msg of serverErrorMessages">{{ msg }}</li>
+            </ul>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,20 @@
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Edit Delete and update Table</mat-card-title>
+                <div class="table-responsive smart-table">
+                    <ng2-smart-table [settings]="settings" [source]="source" class="mat-table no-wrap"></ng2-smart-table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Filterable Table</mat-card-title>
+                <div class="table-responsive smart-table">
+                    <ng2-smart-table [settings]="settings2" [source]="source" class="mat-table no-wrap"></ng2-smart-table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

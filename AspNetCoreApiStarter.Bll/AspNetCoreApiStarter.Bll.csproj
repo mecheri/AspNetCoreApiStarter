@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Localization" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0-preview.19074.2" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCoreApiStarter.Model\AspNetCoreApiStarter.Model.csproj" />
+    <ProjectReference Include="..\AspNetCoreApiStarter.Resources\AspNetCoreApiStarter.Resources.csproj" />
+    <ProjectReference Include="..\AspNetCoreApiStarter.Security\AspNetCoreApiStarter.Security.csproj" />
+    <ProjectReference Include="..\AspNetCoreApiStarter.Shared\AspNetCoreApiStarter.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

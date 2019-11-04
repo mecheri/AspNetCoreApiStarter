@@ -1,0 +1,60 @@
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title i18n>{{ rsc.title }}</mat-card-title>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div fxLayout="row wrap">
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field style="width: 100%">
+                                <input matInput [placeholder]="rsc.form.controls.username.label" type="text" [formControl]="form.controls.username">
+                            </mat-form-field>
+                            <app-field-errors [control]="form.controls.username" [clientErrorMessages]="rsc.form.controls.username.validation"></app-field-errors>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field style="width: 100%">
+                                <input matInput [placeholder]="rsc.form.controls.email.label" type="email" [formControl]="form.controls.email">
+                            </mat-form-field>
+                            <app-field-errors [control]="form.controls.email" [clientErrorMessages]="rsc.form.controls.email.validation"></app-field-errors>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field style="width: 100%">
+                                <input matInput [placeholder]="rsc.form.controls.firstname.label" type="text" [formControl]="form.controls.firstname">
+                            </mat-form-field>
+                            <app-field-errors [control]="form.controls.firstname" [clientErrorMessages]="rsc.form.controls.firstname.validation"></app-field-errors>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field style="width: 100%">
+                                <input matInput [placeholder]="rsc.form.controls.lastname.label" type="text" [formControl]="form.controls.lastname">
+                            </mat-form-field>
+                            <app-field-errors [control]="form.controls.lastname" [clientErrorMessages]="rsc.form.controls.lastname.validation"></app-field-errors>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field style="width: 100%">
+                                <input matInput [placeholder]="rsc.form.controls.password.label" type="password" [formControl]="form.controls.password">
+                            </mat-form-field>
+                            <app-field-errors [control]="form.controls.password" [clientErrorMessages]="rsc.form.controls.password.validation"></app-field-errors>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field style="width: 100%">
+                                <input matInput [placeholder]="rsc.form.controls.confirmPassword.label" [formControl]="form.controls.confirmPassword" type="password">
+                            </mat-form-field>
+                            <app-field-errors [control]="form.controls.confirmPassword" [clientErrorMessages]="rsc.form.controls.confirmPassword.validation"></app-field-errors>
+                        </div>
+                        <!-- column -->
+                        <div class="button-row">
+                            <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">{{ rsc.form.actions.submit }}</button>
+                            <button mat-raised-button color="warn" type="button" (click)="onCancel()">{{ rsc.form.actions.cancel }}</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

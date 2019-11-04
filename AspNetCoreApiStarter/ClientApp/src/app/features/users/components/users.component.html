@@ -1,0 +1,46 @@
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>{{ rsc.title }}</mat-card-title>
+                <div class="m-b-20 m-t-20">
+                    <button mat-raised-button color="primary" (click)="onAddUser()"><mat-icon>add</mat-icon></button>
+                </div>
+                <div class="responsive-table">
+                    <mat-table #table [dataSource]="dataSource" matSort style="max-height: 500px; overflow:auto;">
+                        <ng-container matColumnDef="id">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> {{ rsc.cellsHeaders.num }} </mat-header-cell>
+                            <mat-cell *matCellDef="let user"> {{ user.id }} </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="username">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> {{ rsc.cellsHeaders.username }} </mat-header-cell>
+                            <mat-cell *matCellDef="let user"> {{ user.username}} </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="firstname">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> {{ rsc.cellsHeaders.firstname }} </mat-header-cell>
+                            <mat-cell *matCellDef="let user"> {{ user.firstname}} </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="lastname">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> {{ rsc.cellsHeaders.lastname }} </mat-header-cell>
+                            <mat-cell *matCellDef="let user"> {{ user.lastname}} </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="actions">
+                            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                            <mat-cell *matCellDef="let user">
+                                <div class="button-row">
+                                    <button mat-mini-fab color="primary" (click)="onEditUser(user)"><mat-icon>edit</mat-icon></button>
+                                    <button mat-mini-fab color="warn" (click)="onDeleteUser(user)"><mat-icon>delete</mat-icon></button>
+                                </div>
+                            </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+
+                    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

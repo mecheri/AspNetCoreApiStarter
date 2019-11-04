@@ -1,0 +1,46 @@
+<div class="login-register">
+    <div class="login-register-box">
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="text-center">
+                        <img alt="homepage" src="assets/images/logo-icon.png">
+                        <h4 class="m-t-0">{{ rsc.title }}</h4>
+                    </div>
+                    <div fxLayout="row wrap">
+                        <!-- col full-->
+                        <div *ngIf="errorMessage" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100" class="m-b-20">
+                            <mat-card class="bg-danger">
+                                <mat-card-content>
+                                    {{ errorMessage }}
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput [placeholder]="rsc.form.controls.username.label" [formControl]="form.controls['username']">
+                            </mat-form-field>
+                            <small *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched" class="text-danger support-text">{{ rsc.form.controls.username.validation.required }}</small>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput type="password" [placeholder]="rsc.form.controls.password.label" [formControl]="form.controls['password']">
+                            </mat-form-field>
+                            <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="text-danger support-text">{{ rsc.form.controls.password.validation.required }}</small>
+                        </div>
+                        <!-- col half-->
+                        <div fxFlex.gt-sm="50" fxFlex.gt-xs="50">
+                            <mat-checkbox color="warn">{{ rsc.form.actions.rememberme }}</mat-checkbox>
+                        </div>
+                        <!-- col full-->
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                            <button mat-raised-button color="primary" class="btn-block btn-lg m-t-20 m-b-20" type="submit" [disabled]="!form.valid">{{ rsc.form.actions.login }}</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,206 @@
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Basic Tooltip</mat-card-title>
+        <mat-card-subtitle>The Angular Material tooltip provides a text label that is displayed when the user hovers over or longpresses an
+          element. add
+          <code>matTooltip="yourtext"</code> to any element </mat-card-subtitle>
+        <button mat-raised-button
+        matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        Action
+      </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Tooltip with custom position</mat-card-title>
+    <mat-card-subtitle>The Angular Material tooltip provides a text label that is displayed when the user hovers over or longpresses an element.</mat-card-subtitle>
+
+    <div class="example-tooltip-host" matTooltip="Tooltip!" [matTooltipPosition]="position">
+      <span>Show tooltip</span>
+      <mat-form-field>
+        <mat-select class="example-select" [(ngModel)]="position">
+          <mat-option value="before">Before</mat-option>
+          <mat-option value="after">After</mat-option>
+          <mat-option value="above">Above</mat-option>
+          <mat-option value="below">Below</mat-option>
+          <mat-option value="left">Left</mat-option>
+          <mat-option value="right">Right</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Tooltip that can have a custom class applied.</mat-card-title>
+        <button mat-raised-button
+              matTooltip="Info about the action"
+              matTooltipClass="example-tooltip-red"
+              aria-label="Button that shows a red tooltip"
+              >
+        Red-tooltip Action
+      </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Tooltip with a show and hide delay</mat-card-title>
+        <mat-form-field class="example-user-input">
+          <input matInput placeholder="Show delay (milliseconds)"
+                 type="number"
+                 aria-label="Adds a delay between hovering over the button and displaying the tooltip"
+                 [formControl]="showDelay">
+        </mat-form-field>
+
+        <mat-form-field class="example-user-input">
+          <input matInput placeholder="Hide delay (milliseconds)"
+                 type="number"
+                 aria-label="Adds a delay between hovering away from the button and hiding the tooltip"
+                 [formControl]="hideDelay">
+        </mat-form-field>
+
+        <button mat-raised-button
+                matTooltip="Info about the action"
+                [matTooltipShowDelay]="showDelay.value"
+                [matTooltipHideDelay]="hideDelay.value"
+                aria-label="Button that displays a tooltip with a customized delay in showing and hiding">
+          Action
+        </button>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Tooltip that can be disabled</mat-card-title>
+        <button mat-raised-button
+        matTooltip="Info about the action"
+        [matTooltipDisabled]="disabled.value"
+        aria-label="Button that displays a tooltip that can be programatically disabled">
+          Action
+        </button>
+
+        <mat-checkbox [formControl]="disabled" class="example-disabled-checkbox">
+          Tooltip disabled
+        </mat-checkbox>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Tooltip that can be manually shown/hidden.</mat-card-title>
+        <div>
+          <span> Mouse over to </span>
+          <button mat-button
+                  (mouseenter)="tooltip.show()"
+                  aria-label="Button that progamatically shows a tooltip on another button"
+                  class="example-action-button">
+            show
+          </button>
+          <button mat-button
+                  (mouseenter)="tooltip.hide()"
+                  aria-label="Button that progamatically hides a tooltip on another button"
+                  class="example-action-button">
+            hide
+          </button>
+          <button mat-button
+                  (mouseenter)="tooltip.toggle()"
+                  aria-label="Button that progamatically toggles a tooltip on another button to show/hide"
+                  class="example-action-button">
+            toggle show/hide
+          </button>
+        </div>
+
+        <button mat-raised-button #tooltip="matTooltip"
+                matTooltip="Info about the action"
+                matTooltipPosition="right"
+                aria-tooltip="Button that displays and hides a tooltip triggered by other buttons">
+          Action
+        </button>
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Tooltip with a changing message</mat-card-title>
+        <mat-form-field class="example-user-input">
+          <input matInput placeholder="Tooltip message" [formControl]="message">
+        </mat-form-field>
+
+        <button mat-raised-button [matTooltip]="message.value" aria-label="Button that displays a tooltip with a custom message" class="m-l-20">
+          Action
+        </button>
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Tooltip with a show and hide delay</mat-card-title>
+        <button mat-raised-button
+                matTooltip="By default, I delay"
+                aria-label="Button that displays a tooltip that has custom delays through a default config">
+          Button with delay-default tooltip
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

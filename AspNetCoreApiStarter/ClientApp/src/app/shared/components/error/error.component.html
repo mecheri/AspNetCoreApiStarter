@@ -1,0 +1,12 @@
+<div class="login-register">
+    <div class="login-register-box error-card text-center">
+        <h2>Error!!!</h2>
+        <div *ngIf="routeParams?.error">
+            <div class="error-stack text-muted">
+                {{ routeParams?.error }}
+            </div>
+        </div>
+
+        <a mat-raised-button color="primary" [routerLink]="['/']" class="btn btn-info btn-rounded waves-effect waves-light m-b-40">Back to home</a>
+    </div>
+</div>

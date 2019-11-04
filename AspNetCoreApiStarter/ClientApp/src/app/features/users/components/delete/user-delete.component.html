@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Delete user</h1>
+<div mat-dialog-content class="mat-typography">
+    <mat-list>
+        <mat-list-item> {{ user.username }} </mat-list-item>
+        <mat-list-item> {{ user.firstname }} </mat-list-item>
+        <mat-list-item> {{ user.lastname }} </mat-list-item>
+        <mat-list-item> {{ user.email }} </mat-list-item>
+    </mat-list>
+</div>
+<div mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" type="button" (click)="onDelete()">Submit</button>
+    <button mat-raised-button color="warn" type="button" (click)="onCancel()">Cancel</button>
+</div>

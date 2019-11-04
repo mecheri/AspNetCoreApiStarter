@@ -1,0 +1,203 @@
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Vertical bar chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-bar-vertical class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="single" [gradient]="gradient"
+                        [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                        [tooltipDisabled]="tooltipDisabled" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [showGridLines]="showGridLines"
+                        [barPadding]="40" [view]="view" [roundDomains]="roundDomains" (select)="select($event)" (legendLabelClick)="onLegendLabelClick($event)">
+                    </ngx-charts-bar-vertical>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Horizontal bar chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-bar-horizontal class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="single" [gradient]="gradient"
+                        [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                        [tooltipDisabled]="tooltipDisabled" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [showGridLines]="showGridLines"
+                        [barPadding]="20" [roundDomains]="roundDomains" (legendLabelClick)="onLegendLabelClick($event)" (select)="select($event)">
+                    </ngx-charts-bar-horizontal>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Basic Card Grid-->
+<!-- ============================================================== -->
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Group Vertical bar chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-bar-vertical-2d class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="multi" [gradient]="gradient"
+                        [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                        [tooltipDisabled]="tooltipDisabled" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (legendLabelClick)="onLegendLabelClick($event)"
+                        [showGridLines]="showGridLines" [barPadding]="barPadding" [groupPadding]="20" [roundDomains]="roundDomains"
+                        (select)="select($event)">
+                    </ngx-charts-bar-vertical-2d>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Horizontal bar chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-bar-horizontal-2d class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="multi"
+                        [gradient]="gradient" [tooltipDisabled]="tooltipDisabled" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend"
+                        (legendLabelClick)="onLegendLabelClick($event)" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                        [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [showGridLines]="showGridLines" [barPadding]="barPadding"
+                        [groupPadding]="20" [roundDomains]="roundDomains" (select)="select($event)">
+                    </ngx-charts-bar-horizontal-2d>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Basic Card Grid-->
+<!-- ============================================================== -->
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Line chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-line-chart class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="dateDataWithOrWithoutRange"
+                        [legend]="showLegend" (legendLabelClick)="onLegendLabelClick($event)" [gradient]="gradient" [xAxis]="showXAxis"
+                        [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+                        [yAxisLabel]="yAxisLabel" [autoScale]="autoScale" [timeline]="timeline" [showGridLines]="showGridLines"
+                        [curve]="curve" [rangeFillOpacity]="rangeFillOpacity" [roundDomains]="roundDomains" [tooltipDisabled]="true"
+                        (select)="select($event)">
+                    </ngx-charts-line-chart>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Area chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-area-chart class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="dateData" [legend]="showLegend"
+                        (legendLabelClick)="onLegendLabelClick($event)" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis"
+                        [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+                        [autoScale]="autoScale" [timeline]="timeline" [showGridLines]="showGridLines" [roundDomains]="roundDomains"
+                        [curve]="curve" [tooltipDisabled]="tooltipDisabled" (select)="select($event)">
+                    </ngx-charts-area-chart>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Basic Card Grid-->
+<!-- ============================================================== -->
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Stacked chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-area-chart-stacked class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="dateData"
+                        [legend]="showLegend" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" (legendLabelClick)="onLegendLabelClick($event)"
+                        [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+                        [timeline]="timeline" [showGridLines]="showGridLines" [roundDomains]="roundDomains" [tooltipDisabled]="tooltipDisabled"
+                        [curve]="curve" (select)="select($event)">
+                    </ngx-charts-area-chart-stacked>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Normalize Area chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-area-chart-normalized class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="dateData"
+                        [legend]="showLegend" [gradient]="gradient" [xAxis]="showXAxis" (legendLabelClick)="onLegendLabelClick($event)"
+                        [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+                        [yAxisLabel]="yAxisLabel" [timeline]="timeline" [showGridLines]="showGridLines" [roundDomains]="roundDomains"
+                        [tooltipDisabled]="tooltipDisabled" [curve]="curve" (select)="select($event)">
+                    </ngx-charts-area-chart-normalized>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Basic Card Grid-->
+<!-- ============================================================== -->
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Pie chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-pie-chart class="chart-container" [scheme]="colorScheme" [results]="single" [legend]="showLegend" [explodeSlices]="explodeSlices"
+                        [labels]="showLabels" [doughnut]="doughnut" [arcWidth]="arcWidth" (legendLabelClick)="onLegendLabelClick($event)"
+                        [gradient]="gradient" [tooltipDisabled]="tooltipDisabled" (select)="select($event)">
+                    </ngx-charts-pie-chart>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-md="50">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Advanced pie chart</mat-card-title>
+                <mat-card-subtitle>Check the document here for getting more info
+                    <a href="https://swimlane.github.io/ngx-charts/" target="_blank">Click Here</a>
+                </mat-card-subtitle>
+                <div class="w100">
+                    <ngx-charts-advanced-pie-chart class="chart-container" [scheme]="colorScheme" [results]="single" (legendLabelClick)="onLegendLabelClick($event)"
+                        [gradient]="gradient" [tooltipDisabled]="tooltipDisabled" (select)="select($event)">
+                    </ngx-charts-advanced-pie-chart>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
