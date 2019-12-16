@@ -31,6 +31,7 @@ namespace AspNetCoreApiStarter.Controllers
             this.userBll = userBll;
             this.jwtFactory = jwtFactory;
             this.jwtOptions = jwtOptions.Value;
+
         }
 
         /// <summary>
